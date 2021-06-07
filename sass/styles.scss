@@ -1,0 +1,120 @@
+// Primary
+$violet: hsl(263, 55%, 52%);
+$drk-grey-blu: hsl(217, 19%, 35%);
+$drk-blk-blu: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+// Neutral
+$lgt-grey: hsl(0, 0%, 81%);
+$lgt-blu: hsl(210, 46%, 95%);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $lgt-blu;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+main  {
+  margin: 4.4375em 0;
+}
+
+.card {
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 10px rgba(123, 123, 123, 0.8);
+  // width: 100%;
+  margin: 1.5em;
+  padding: 1.5em 1.5em 2em;
+
+  &__title {
+    font-size: 1.325rem;
+    font-weight: 600;
+    padding-bottom: 1em;
+    z-index: 3;
+  }
+
+  &--1 {
+    position: relative;
+    background-color: $violet;
+    color: $white;
+    padding-right: 1.65em;
+    z-index: 1;
+    grid-area: card--1;
+
+    &::before {
+      content: url("../images/bg-pattern-quotation.svg");
+      position: absolute;
+      top: 0;
+      right: 1.5em;
+      z-index: -1;
+    }
+  }
+
+  &--2 {
+    background-color: $drk-grey-blu;
+    color: $white;
+    grid-area: card--2;
+  }
+
+  &--3 {
+    background-color: $white;
+    color: $drk-blk-blu;
+    grid-area: card--3;
+  }
+
+  
+  &--4 {
+    background-color: $drk-blk-blu;
+    color: $white;
+    grid-area: card--4;
+  }
+  
+  &--5 {
+    background-color: $white;
+    color: $drk-blk-blu;
+    grid-area: card--5;
+  }
+
+  &__quote {
+    opacity: 70%;
+    font-size: 0.870rem;
+    line-height: 1.5em;
+  }
+}
+
+.author {
+  &__container {
+    display: flex;
+    font-weight: 500;
+  }
+
+  &__headshot {
+    border-radius: 50%;
+    border: 2px solid hsla(0, 0%, 100%, .5); 
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1rem 1.1rem 0;
+  }
+
+  &__text-container {
+    z-index: 3;
+  }
+
+  &__name {
+    font-size: 0.9rem;
+  }
+
+  &__verified {
+    font-size: 0.75rem;
+    opacity: 50%; 
+  }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
