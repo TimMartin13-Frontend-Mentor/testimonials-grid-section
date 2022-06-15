@@ -22,7 +22,7 @@ main {
   padding: 1.5em 1.5em 2em;
 }
 .card__title {
-  font-size: 1.325rem;
+  font-size: 1.32rem;
   font-weight: 600;
   padding-bottom: 1em;
   z-index: 3;
@@ -90,6 +90,21 @@ main {
   opacity: 50%;
 }
 
+.brdr-violet {
+  border: 2px solid rgba(117, 65, 200, 0.7);
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    display: grid;
+    grid-template: "card--1 card--1 card--2 card--5" auto "card--3 card--4 card--4 card--5" auto/1fr 1fr 1fr 1fr;
+    max-width: 1110px;
+  }
+
+  .card {
+    margin: 0.90625em;
+  }
+}
 .attribution {
   font-size: 11px;
   text-align: center;

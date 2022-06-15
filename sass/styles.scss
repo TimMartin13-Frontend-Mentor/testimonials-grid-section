@@ -28,12 +28,11 @@ main  {
 .card {
   border-radius: 0.5em;
   box-shadow: 2px 2px 10px rgba(123, 123, 123, 0.8);
-  // width: 100%;
   margin: 1.5em;
   padding: 1.5em 1.5em 2em;
 
   &__title {
-    font-size: 1.325rem;
+    font-size: 1.32rem;
     font-weight: 600;
     padding-bottom: 1em;
     z-index: 3;
@@ -68,7 +67,7 @@ main  {
     grid-area: card--3;
   }
 
-  
+
   &--4 {
     background-color: $drk-blk-blu;
     color: $white;
@@ -113,6 +112,26 @@ main  {
   &__verified {
     font-size: 0.75rem;
     opacity: 50%; 
+  }
+}
+
+.brdr-violet {
+  border: 2px solid hsla(263, 55%, 52%, 0.7);
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    display: grid;
+    grid-template:
+      "card--1 card--1 card--2 card--5" auto
+      "card--3 card--4 card--4 card--5" auto
+      / 1fr 1fr 1fr 1fr;
+  // grid-column-gap: 0.5rem;
+    max-width: 1110px
+  }
+
+  .card {
+    margin: 0.90625em;
   }
 }
 
