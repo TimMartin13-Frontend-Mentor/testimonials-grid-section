@@ -19,10 +19,11 @@ $lgt-blu: hsl(210, 46%, 95%);
 body {
   background-color: $lgt-blu;
   font-family: 'Barlow Semi Condensed', sans-serif;
+  min-width: 375px;
 }
 
 main  {
-  margin: 4.4375em auto;
+  margin: 5.75em auto;
 }
 
 .card {
@@ -42,7 +43,6 @@ main  {
     position: relative;
     background-color: $violet;
     color: $white;
-    // padding-right: 1.65em;
     z-index: 1;
     grid-area: card--1;
 
@@ -139,6 +139,22 @@ main  {
 
   .card {
     margin: 0;
+    padding: 1.5em 2.05em 1.6em 2.05em;
+
+    &__title {
+      padding-bottom: 1em;
+    }
+
+    &__quote {
+      padding-right: 0.2em;
+    }
+
+    &--1 {
+  
+      &::before {
+        right: 5em;
+      }
+    }
   }
 }
 

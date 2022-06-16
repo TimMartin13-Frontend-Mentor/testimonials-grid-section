@@ -9,10 +9,11 @@
 body {
   background-color: hsl(210deg, 46%, 95%);
   font-family: "Barlow Semi Condensed", sans-serif;
+  min-width: 375px;
 }
 
 main {
-  margin: 4.4375em auto;
+  margin: 5.75em auto;
 }
 
 .card {
@@ -109,6 +110,16 @@ main {
 
   .card {
     margin: 0;
+    padding: 1.5em 2.05em 1.6em 2.05em;
+  }
+  .card__title {
+    padding-bottom: 1em;
+  }
+  .card__quote {
+    padding-right: 0.2em;
+  }
+  .card--1::before {
+    right: 5em;
   }
 }
 .attribution {
